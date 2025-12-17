@@ -10,18 +10,18 @@ The project focuses on:
 * Email/Password authentication
 * Storing and retrieving user-specific data from Firestore
 * Preparing a complete deliverable suitable for a live demo or recorded presentation
-
+* Integrates Firebase Cloud Firestore to store workout data persistently from the frontend
 ---
 
 ## Features
 
 *  User Registration & Login (Firebase Authentication)
-*  Add Workout Records (type, duration, notes)
+*  Add Workout Records (name, duration, calories)
 *  View Workout History per User
 *  Protected Pages (only accessible after login)
 *  Cloud Firestore for persistent data storage
-*  Clean, modern UI (HTML + CSS)
-
+*  Frontend : Clean, modern UI (HTML + CSS3 + JavaScript (ES Modules) + Firebase SDK (Web v10))
+*  Backend : Firebase Authentication, Firebase Cloud Firestore, Firebase Hosting
 ---
 
 ## Project Architecture
@@ -42,19 +42,18 @@ Each authenticated user has their own workout data stored securely in Firestore.
 FitTrack-Demo/
 │
 ├── index.html          # Landing page
-├── login.html          # Login & Register page
-├── dashboard.html      # User dashboard
-├── tracking.html       # Add workouts
-├── history.html        # View workout history
+├── login.html          # User authentication (Firebase Auth)
+│                        (Auth logic implemented directly inside the page)
+├── tracking.html       # Add workout (Firestore write)
+│                        (Firestore write logic implemented inside the page)
+├── history.html        # View workout history (Firestore read)
+│                        (Firestore read logic implemented inside the page)
 │
-├── firebase.js         # Firebase configuration
-├── auth.js             # Authentication logic
-├── tracking.js         # Firestore write logic
-├── history.js          # Firestore read logic
-│
+├── firebase.js         # Firebase configuration (Auth + Firestore)
 ├── styles.css          # Shared styling
-├── README.md           # Project documentation
+│
 └── .gitignore
+
 ```
 
 ---
@@ -70,15 +69,20 @@ git clone https://github.com/Maramnagy/FitTrack-Demo
 2. Open the project folder:
 
 ```bash
-cd FitTrack-Demo
+cd FitTrack-Project
 ```
 
-3. Open `index.html` using Live Server or directly in a browser
-
-4. Make sure Firebase services are enabled:
-
-* Authentication → Email/Password
-* Cloud Firestore → Test mode
+3. Install Firebase CLI and log in:
+```bash
+npm install -g firebase-tools
+firebase login
+```
+4. Deploy the application to Firebase Hosting:
+```bash
+firebase deploy
+```
+5. Open the deployed application using the generated hosting URL:
+https://fittrack-demo-51bb1.web.app
 
 ---
 
