@@ -1,6 +1,6 @@
 # FitTrack Demo
 
-## 📌 Project Overview
+## Project Overview
 
 FitTrack Demo is a simple fitness tracking web application built as a course demo project. It demonstrates user authentication, workout tracking, and workout history storage using **Firebase**.
 
@@ -13,18 +13,18 @@ The project focuses on:
 
 ---
 
-## 🚀 Features
+## Features
 
-* 🔐 User Registration & Login (Firebase Authentication)
-* 🏋️ Add Workout Records (type, duration, notes)
-* 📊 View Workout History per User
-* 🔒 Protected Pages (only accessible after login)
-* ☁️ Cloud Firestore for persistent data storage
-* 🎨 Clean, modern UI (HTML + CSS)
+*  User Registration & Login (Firebase Authentication)
+*  Add Workout Records (type, duration, notes)
+*  View Workout History per User
+*  Protected Pages (only accessible after login)
+*  Cloud Firestore for persistent data storage
+*  Clean, modern UI (HTML + CSS)
 
 ---
 
-## 🧱 Project Architecture
+## Project Architecture
 
 * **Frontend:** HTML, CSS, JavaScript
 * **Backend (BaaS):** Firebase
@@ -36,7 +36,7 @@ Each authenticated user has their own workout data stored securely in Firestore.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 FitTrack-Demo/
@@ -59,7 +59,7 @@ FitTrack-Demo/
 
 ---
 
-## ⚙️ How to Run Locally
+## How to Run Locally
 
 1. Clone the repository:
 
@@ -82,7 +82,7 @@ cd FitTrack-Demo
 
 ---
 
-## 🎥 Demo Instructions
+## Demo Instructions
 
 Suggested demo flow:
 
@@ -94,7 +94,7 @@ Suggested demo flow:
 
 ---
 
-## ⚠️ Known Limitations
+## Known Limitations
 
 * No password reset functionality
 * Basic UI (no framework)
@@ -102,7 +102,7 @@ Suggested demo flow:
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * Add charts and analytics
 * Improve UI with a framework (React / Vue)
@@ -111,9 +111,8 @@ Suggested demo flow:
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 Maram Mohamed
 
-This project was developed as part of a course requirement and is intended for educational/demo purposes only.
 
